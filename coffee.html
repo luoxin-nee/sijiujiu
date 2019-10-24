@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>咖啡儿</title>
+    <title>咖啡儿2</title>
     <style type="text/css">
         * {
             margin: 0;
@@ -96,23 +96,31 @@
             padding-top: 50px;
             margin-left: 80px;
             list-style-type: none;  
-            
-             }
-             li a:hover {
-                 background-color: rgb(48, 96, 128);
-                 color: rgb(78, 148, 240);
-             }
-             li a.active {
-    background-color: #4CAF50;
-    color: white;
+        }
+        ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 200px;
+background-color: #f1f1f1;
 }
 
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+li a {    
+display: block;
+color: #000;
+padding: 8px 16px;
+text-decoration: none;
 }
-       
-         .left .choose ul {
+
+
+
+     li a:hover {
+         background-color: rgb(48, 96, 128);
+         color: rgb(78, 148, 240);
+     }
+
+
+        .left .choose ul {
             position: fixed;
         }
         
@@ -155,7 +163,7 @@ li a:hover:not(.active) {
         .title {
             height: 300px;
             width: 300px;
-            margin-left:20px  ;
+            margin: 20px auto;
         }
 
         .title img {
@@ -165,12 +173,18 @@ li a:hover:not(.active) {
         #coffee1,#coffee2,#coffee3,#coffee4,#coffee5{
             margin-left: 20px;
         }
+        li a:active{
+    background-color: darkslategray;
+}
+  .left .choose li:not(:last-child){
+            border-bottom: 2px solid black;}
+   
     </style>
 </head>
 <body>
         <div class="head">
             <div class="img1">
-                <img src="img\t0179a3075559502f92.jpg" alt="" style="width: 75px;height: 75px;"
+                <img src="img\鲸鱼.png" alt="" style="width: 75px;height: 75px;"
                     class="coffee">
                 <p id="title">来杯咖啡吗？</p>
             </div>
@@ -178,21 +192,21 @@ li a:hover:not(.active) {
         </div>
    
         <div class="center">    
-             <img src="img\2238196_094518206167_2.jpg" alt="" 
-      width="1573px"  height="150px">
+             <img src="img\t013e57e233bde58596.png" alt="" 
+      width="1700px"  height="150px">
             <div class="left">
                 <ul class="choose">
-                    <li><a href="#coffee1"><font color="black">拿铁</font> </a></li>
-                    <li><a href="#coffee2"><font color="black">卡布奇洛</font></a></li>
-                    <li><a href="#coffee3"><font color="black">奥瑞白</font></a></li>
-                    <li><a href="#coffee4"><font color="black">美式咖啡</font></a></li>
-                    <li><a href="#coffee5"><font color="black">焦糖玛奇朵</font></a></li>
-                </ul>
+                        <li><a href="#coffee1"><font color="black">拿铁</font> </a></li>
+                        <li><a href="#coffee2"><font color="black">卡布奇洛</font></a></li>
+                        <li><a href="#coffee3"><font color="black">奥瑞白</font></a></li>
+                        <li><a href="#coffee4"><font color="black">美式咖啡</font></a></li>
+                        <li><a href="#coffee5"><font color="black">焦糖玛奇朵</font></a></li>
+                   </ul>
     
             </div>
             <div class="right">
                
-                <table >
+                <table>
                     <tr>
                         <th>咖啡名称</th>
                         <th>咖啡价格(元/杯)</th>
