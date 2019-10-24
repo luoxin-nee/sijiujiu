@@ -95,9 +95,24 @@
         .left .choose li {
             padding-top: 50px;
             margin-left: 80px;
-        }
+            list-style-type: none;  
+            
+             }
+             li a:hover {
+                 background-color: rgb(48, 96, 128);
+                 color: rgb(78, 148, 240);
+             }
+             li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
 
-        .left .choose ul {
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+       
+         .left .choose ul {
             position: fixed;
         }
         
@@ -120,7 +135,7 @@
         }
 
         .center .right table {
-            margin: 20px auto;
+            margin: 20px ;
             width: 500px;
             height: 250px;
             border-collapse: collapse;
@@ -140,7 +155,7 @@
         .title {
             height: 300px;
             width: 300px;
-            margin: 20px auto;
+            margin-left:20px  ;
         }
 
         .title img {
@@ -163,21 +178,21 @@
         </div>
    
         <div class="center">    
-             <img src="img\t013e57e233bde58596.png" alt="" 
-      width="1800px"  height="150px">
+             <img src="img\2238196_094518206167_2.jpg" alt="" 
+      width="1573px"  height="150px">
             <div class="left">
                 <ul class="choose">
-                    <li><a href="#coffee1">拿铁</a></li>
-                    <li><a href="#coffee2">卡布奇洛</a></li>
-                    <li><a href="#coffee3">奥瑞白</a></li>
-                    <li><a href="#coffee4">美式咖啡</a></li>
-                    <li><a href="#coffee5">焦糖玛奇朵</a></li>
+                    <li><a href="#coffee1"><font color="black">拿铁</font> </a></li>
+                    <li><a href="#coffee2"><font color="black">卡布奇洛</font></a></li>
+                    <li><a href="#coffee3"><font color="black">奥瑞白</font></a></li>
+                    <li><a href="#coffee4"><font color="black">美式咖啡</font></a></li>
+                    <li><a href="#coffee5"><font color="black">焦糖玛奇朵</font></a></li>
                 </ul>
     
             </div>
             <div class="right">
                
-                <table>
+                <table >
                     <tr>
                         <th>咖啡名称</th>
                         <th>咖啡价格(元/杯)</th>
