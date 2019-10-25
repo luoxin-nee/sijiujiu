@@ -24,7 +24,7 @@
 
         .center {
             width: 100%;
-            height: 3200px;
+            height: 3100px;
             background-color: #ffffff;
         }
 
@@ -45,7 +45,7 @@
 
         .right {
             width: 80%;
-            height: 3200px;
+            height: 3100px;
             background-color: #ffffff;
             float: left;
         }
@@ -88,21 +88,22 @@
             height: 300px;
         }
 
-        .left .choose {
-            position: fixed;
-        }
-
-        .left .choose li {
+     
+        /* .left .choose li {
             padding-top: 50px;
             margin-left: 80px;
             list-style-type: none;  
-        }
+        } */
         ul {
 list-style-type: none;
 margin: 0;
 padding: 0;
-width: 200px;
+width: 100%;
 background-color: #f1f1f1;
+position: sticky;
+    height: 200px;
+    overflow: auto;
+    top: 0px;
 }
 
 li a {    
@@ -202,6 +203,9 @@ text-decoration: none;
     
     font-size: 30px;
     font-weight: bold;}
+    #price-table tr td:last-child::before {
+    content: '￥';
+}
        
 
    
@@ -232,7 +236,7 @@ text-decoration: none;
             </div>
             <div class="right">
                
-                <table>
+                <table id="price-table">
                     <tr>
                         <th>咖啡名称</th>
                         <th>咖啡价格(元/杯)</th>
@@ -255,13 +259,13 @@ text-decoration: none;
                     </tr>
                     <tr>
                         <td>焦糖玛奇朵</td>
-                        <td>300</td>
+                        <td>300 </td>
                     </tr>
                 </table>
                 <br><br><br>
                 <div id="coffee1">
     
-                    <img src="img\t01013c91547cd6107f.jpg" alt="" id="coffee1" height="250">
+                    <img src="img\t01013c91547cd6107f.jpg" alt="" id="coffee1" height="350">
     
     
                     <h3>拿铁</h3>
@@ -274,7 +278,7 @@ text-decoration: none;
                 <div id="coffee2">
                     <br><br><br><br><br>
                     <img src="img\20018550_105951904000_2.jpg "
-                        alt="" height="250">
+                        alt="" height="350">
                         <h3>卡布奇诺</h3>
 
                         <p >爱喝咖啡的人们，发觉浓缩咖啡、牛奶和奶泡混合后，颜色就像是修士所穿的深褐色道袍，于是灵机一动，就给牛奶加咖啡又有尖尖奶泡的饮料，取名为卡布奇诺(Cappuccino)。英文最早使用此字的时间在一九四八年，当时旧金山一篇报导率先介绍卡布奇诺饮料，一直到一九九零年以后，才成为世人耳熟能详的咖啡饮料。应该可以这么说Cappuccino咖啡这个字，源自圣芳济教会(Capuchin)和意大利文头巾(Cappucio)，相信Cappuccino的原始造字者，做梦也没料到僧侣的道袍最后会变成一种咖啡饮料名称。
@@ -283,7 +287,7 @@ text-decoration: none;
                     <div id="coffee3">
                         <br><br><br><br><br>
                         <img src="img\20018550_105951904000_2.jpg"
-                            alt="" height="250">
+                            alt="" height="350">
         
                         <h3>奥瑞白</h3>
         
@@ -293,7 +297,7 @@ text-decoration: none;
                     <div id="coffee4">
                         <br><br><br><br><br>
                         <img src="img\20018550_105951904000_2.jpg"
-                            alt="" height="250">
+                            alt="" height="350">
         
                         <h3>美式咖啡</h3>
         
@@ -304,7 +308,7 @@ text-decoration: none;
                     <div id="coffee5">
                         <br><br><br><br><br>
                         <img src="img\2531170_161839555105_2.jpg"
-                            alt="" height="250">
+                            alt="" height="350">
         
                         <h3>焦糖玛奇朵</h3>
         
