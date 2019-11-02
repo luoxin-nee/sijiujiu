@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="danmu.css">
+
+    <script>
+
+        $(function () {
+           
+
+            //设置“发送”按钮点击事件，将弹幕体显示在弹幕墙上
+            $('.send').click(function () {
+                //获取文本输入框的内容
+                var val = $('.content').val();
+                //将文本框的内容赋值给val后，将文本框的内容清除，以便用户下一次输入
+                $('.content').val('');
+                //将文本框内容用div包裹起来，便于后续处理
+                var $content = $('<div class="text">' + val + '</div>');
+                // 设置随机颜色
+                var r = Math.floor(Math.random() * 254)
+                var g = Math.floor(Math.random() * 254)
+                var b = Math.floor(Math.random() * 254)
+                // 设置随机字体大小
+                var f = Math.floor(Math.random() * 40)
+
+                //获取弹幕墙对象
+                $screen = $(document.getElementById("qiang"));
+                //设置弹幕体出现时的上边距，为任意值
+                var top = Math.random() * $screen.height() + 40;
+                //设置弹幕体的上边距和左边距
+                $content.css({
+                    top: top + "px",
+                    right: 80,
+                    color: "rgb(" + r + "," + g + "," + b + ")",
+                    fontSize: f + "px"
+                });
+                //将弹幕体添加到弹幕墙中
+                $('.dm').append($content);
+                //弹幕体从右端移动到最左侧，时间为8秒，然后直接删除该元素
+                $content.animate({
+                    right: $screen.width() + 80 - $content.width()
+                }, 8000, function () {
+                    $(this).remove();
+                });
+            });
+            //设置“清屏”点击事件，清除弹幕墙中的所有内容
+            $('.clear').click(function () {
+                $('.dm').empty();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="aa">
+        <div id="qiang">
+            <span
+                style="text-align: center;display:block;padding: 0;margin: 0;font-size: 22px; color: rgb(255, 255, 255);">鲸鱼冲鸭</span>
+            <div class="dm">
+                
+            </div>
+        </div>
+        <div class="edit">
+            <p>
+                <input placeholder="说说对鲸鱼哥哥的爱吧" class="content" type="text" />
+            </p>
+            <p>
+                <input type="button" class="send" value="发送" />
+                <input type="button" class="clear" value="清除" />
+            </p>
+        </div>
+    </div>
+
+       
+
+</body>
+
+</html>
