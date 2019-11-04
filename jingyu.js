@@ -1,8 +1,8 @@
-axios.get('https://mock-api.com/Ln4Ld7nx.mock/nihao')
+axios.get('a.json')
     .then(function(res) {
         $(".loading i").css("animation-play-state","running");
         for (var i = 0; i < res.data.length; i++) {
-            $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + "><div class='ant'><h4>" + res.data[i].title + "</h4><span class='date'>" + res.data[i].date + "</span><p>" + res.data[i].ant + "</p></div></a></li>");
+            $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + ">"+"</a></li>");
         }
         $(".loading").css("display","none");
         $(".loading i").css("animation-play-state","paused");
@@ -14,10 +14,10 @@ $(document).ready(function() {
         $('.nl li').remove();
         $(".loading").css("display","block");
         $(".loading i").css("animation-play-state","running");
-        axios.get('https://mock-api.com/Ln4Ld7nx.mock/nihao')
+        axios.get('a.json')
             .then(function(res) {            
                 for (var i = 0; i < res.data.length; i++) {
-                    $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + "><div class='ant'><h4>" + res.data[i].title + "</h4><span class='date'>" + res.data[i].date + "</span><p>" + res.data[i].ant + "</p></div></a></li>");
+                    $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + ">" + "</a></li>");
                 }
                 $(".loading").css("display","none");
                 $(".loading i").css("animation-play-state","paused");
@@ -30,10 +30,10 @@ $(document).ready(function() {
         $('.nl li').remove();
         $(".loading").css("display","block");
         $(".loading i").css("animation-play-state","running");
-        axios.get('https://mock-api.com/Ln4Ld7nx.mock/nihao')
+        axios.get('http://mock-api.com/Ln4Ld7nx.mock/nihao')
             .then(function(res) {
                 for (var i = 0; i < res.data.length; i++) {
-                    $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + "><div class='ant'><h4>" + res.data[i].title + "</h4><span class='date'>" + res.data[i].date + "</span><p>" + res.data[i].ant + "</p></div></a></li>");
+                    $('.nl').append("<li><a href='newMain.html?ind="+res.data[i].ind+"'><img src=" + res.data[i].url + "><div class='ant'>" + res.data[i].title + "</h4><span class='date'>" + res.data[i].date + "</span><p>" + res.data[i].ant + "</p></div></a></li>");
                 }
                 $(".loading").css("display","none");
                 $(".loading i").css("animation-play-state","paused");
